@@ -1,1 +1,3 @@
-Print("Hello world")
+print("Hello world")
+
+print("pridal jsem radek cislo 3")
