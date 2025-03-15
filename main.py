@@ -60,10 +60,10 @@ try:
     choice = int(input("Enter a number btw. 1 and 3 to select: "))
     print("-" * 40)
     if choice not in range(1, 4):
-        print("Neplatná volba. Ukončuji program.")
+        print("Invalid choice. Exiting the program.")
         exit()
 except ValueError:
-    print("Musíte zadat číslo. Ukončuji program.")
+    print("You must enter a number. Exiting the program.")
     exit()
 
 text = TEXTS[choice - 1]
