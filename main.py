@@ -54,3 +54,18 @@ print("-" * 40)
 print(f"Welcome to the app, {username}")
 print("We have 3 texts to be analyzed.")
 print("-" * 40)
+
+# Výběr textu
+try:
+    choice = int(input("Enter a number btw. 1 and 3 to select: "))
+    print("-" * 40)
+    if choice not in range(1, 4):
+        print("Neplatná volba. Ukončuji program.")
+        exit()
+except ValueError:
+    print("Musíte zadat číslo. Ukončuji program.")
+    exit()
+
+text = TEXTS[choice - 1]
+words = text.split()
+clean_words = [word.strip(string.punctuation) for word in words]
