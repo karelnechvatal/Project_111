@@ -87,3 +87,17 @@ print(f"There are {lowercase_count} lowercase words.")
 print(f"There are {numeric_count} numeric strings.")
 print(f"The sum of all the numbers {numeric_sum}")
 print("-" * 40)
+
+# Sloupcový graf délky slov
+word_lengths = {}
+for word in clean_words:
+    length = len(word)
+    if length in word_lengths:
+        word_lengths[length] += 1
+    else:
+        word_lengths[length] = 1
+
+print("LEN|  OCCURENCES  |NR.")
+print("-" * 40)
+for length in sorted(word_lengths):
+    print(f"{length:>3}| {'*' * word_lengths[length]:<15} |{word_lengths[length]}")
