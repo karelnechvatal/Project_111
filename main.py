@@ -1,3 +1,6 @@
-print("Hello world")
+"""
+projekt_1.py: první projekt do Engeto Online Python Akademie
 
-print("pridal jsem radek cislo 3")
+author: Petr Svetr
+email: petr.svetr@gmail.com
+"""
