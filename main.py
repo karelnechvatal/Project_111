@@ -69,3 +69,21 @@ except ValueError:
 text = TEXTS[choice - 1]
 words = text.split()
 clean_words = [word.strip(string.punctuation) for word in words]
+
+# Analýza textu
+word_count = len(clean_words)
+titlecase_count = sum(1 for word in clean_words if word.istitle())
+uppercase_count = sum(1 for word in clean_words if word.isupper() and word.isalpha())
+lowercase_count = sum(1 for word in clean_words if word.islower())
+numeric_values = [int(word) for word in clean_words if word.isdigit()]
+numeric_count = len(numeric_values)
+numeric_sum = sum(numeric_values)
+
+# Výpis statistik
+print(f"There are {word_count} words in the selected text.")
+print(f"There are {titlecase_count} titlecase words.")
+print(f"There are {uppercase_count} uppercase words.")
+print(f"There are {lowercase_count} lowercase words.")
+print(f"There are {numeric_count} numeric strings.")
+print(f"The sum of all the numbers {numeric_sum}")
+print("-" * 40)
