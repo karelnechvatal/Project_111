@@ -41,3 +41,16 @@ USERS = {
     "mike": "password123",
     "liz": "pass123"
 }
+
+# Přihlášení uživatele
+username = input("username: ")
+password = input("password: ")
+
+if USERS.get(username) != password:
+    print("unregistered user, terminating the program..")
+    exit()
+
+print("-" * 40)
+print(f"Welcome to the app, {username}")
+print("We have 3 texts to be analyzed.")
+print("-" * 40)
